@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="Mirosław Rzońca" />
+    <title>Interaktywny system wspomagający decyzję pacjenta w zakresie leczenie i konieczności konsultacji lekarskich.</title>
+
+    <!-- Favico-->
+    <link rel="icon" type="image/x-icon" href="assets/consultation.ico" />
+
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+
+    <!-- Styl CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+
+    <!-- Parametry wejsciowe-->
+    <section class="page-section bg-input" id="Parametr IN">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6 text-center">
+                    <h2 class="mt-0">Dane</h2>
+                    <hr class="divider" />
+                    <p class="text-muted mb-5">Poniżej znajdują się podstawowe i jedyne dane dot. użytkownika na których będzie bazować poniższy system. W celu kontynuowania proszę o podanie następujących danych.</p>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                <div class="col-lg-6">
+
+                    <form id="DaneGatherer" data-sb-form-api-token="API_TOKEN">
+
+                        <!-- Wiek input-->
+                        <div class="form-floating mb-3">
+                            <input type="number" id="wiek" min="1" class="form-control" placeholder="Podaj swój aktualny wiek." data-sb-validations="required" />
+                            <label for="wiek">Wiek</label>
+                            <div class="invalid-feedback" data-sb-feedback="wiek:required">Podaj swój wiek</div>
+                        </div>
+
+                        <!-- Wzrost input-->
+                        <div class="form-floating mb-3">
+                            <input type="number" id="height" min="1" class="form-control" placeholder="Podaj swój wzrost." data-sb-validations="required" />
+                            <label for="wiek">Wzrost</label>
+                            <div class="invalid-feedback" data-sb-feedback="height:required">Podaj swój wzrost.</div>
+                        </div>
+                        <!-- Waga input-->
+                        <div class="form-floating mb-3">
+                            <input type="number" id="waga" min="1" class="form-control" placeholder="Podaj swóją wagę." data-sb-validations="required" />
+                            <label for="waga">Waga</label>
+                            <div class="invalid-feedback" data-sb-feedback="waga:required">Podaj swóją wagę.</div>
+                        </div>
+                        <!-- Płeć input-->
+                        <label for="Płeć" class="form-floating mb-3">Płeć</label>
+                        <select name="Płeć" class="form-control" required>
+                            <option value="m">Mężczyzna</option>
+                            <option value="k">Kobieta</option>
+                        </select>
+                </div>
+                <label for="Odstep" class="form-floating mb-3"> </label>
+
+                <div class="d-none" id="submitError"><div class="text-center text-danger mb-3">Nie uzupełniono wszystkich danych!</div></div>
+
+                <!-- Submit Button-->
+                <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Zatwierdź</button></div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer-->
+    <footer class="bg-light py-5">
+        <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Mirosław Rzońca</div></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
